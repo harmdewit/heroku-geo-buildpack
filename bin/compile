@@ -53,7 +53,7 @@ function set-default-env (){
 }
 
 # Retrieve versions
-# GEOS_VERSION=$(manifest_version "geos")
+
 GEOS_VERSION="3.4.1"
 GDAL_VERSION=$(manifest_version "gdal")
 PROJ_VERSION=$(manifest_version "proj")
