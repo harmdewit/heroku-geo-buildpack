@@ -70,7 +70,7 @@ VENDORED_PROJ="vendor/proj/$PROJ_VERSION"
 # Make sure cache dir exists
 mkdir -p $CACHE_DIR
 
-if [ ! -d $CACHE_DIR/$VENDORED_GEOS ]; then
+# if [ ! -d $CACHE_DIR/$VENDORED_GEOS ]; then
   echo "-----> Fetching and vendoring geos"
   rm -rf "$CACHE_DIR/vendor/geos"
   download_package "geos" "${GEOS_VERSION}" "${CACHE_DIR}/${VENDORED_GEOS}"
