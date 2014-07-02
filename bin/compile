@@ -31,7 +31,7 @@ function indent() {
 }
 
 function manifest_version() {
-  curl "http://enquire-geo.s3.amazonaws.com/manifest.${1}" -s -o - | head -n 1
+ curl "http://enquire-geo.s3.amazonaws.com/manifest.${1}" -s -o - | head -n 1
 }
 
 
@@ -54,9 +54,10 @@ function set-default-env (){
 }
 
 # Retrieve versions
-GEOS_VERSION=$(manifest_version "geos")
-GDAL_VERSION=$(manifest_version "gdal")
-PROJ_VERSION=$(manifest_version "proj")
+GEOS_VERSION="3.4.1"
+GDAL_VERSION="1.11.0"
+PROJ_VERSION="4.8.0"
+#PROJ_VERSION=$(manifest_version "proj")
 
 # Display some information
 echo "Using geos version: ${GEOS_VERSION}" | indent
