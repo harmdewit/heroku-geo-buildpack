@@ -11,7 +11,7 @@ set -e
 unset GIT_DIR
 
 # Configuration
-S3_BUCKET=${HEROKU_GEO_BUILDBACK_S3_BUCKET:-"enquire-geo"}
+# S3_BUCKET=${HEROKU_GEO_BUILDBACK_S3_BUCKET:-"enquire-geo"}
 
 # Parameters
 BUILD_DIR=$1
@@ -31,7 +31,7 @@ function indent() {
 }
 
 function manifest_version() {
-  curl "http//enquire-geo.s3.amazonaws.com/manifest.${1}" -s -o - | head -n 1
+  curl "http://enquire-geo.s3.amazonaws.com/manifest.${1}" -s -o - | head -n 1
 }
 
 
