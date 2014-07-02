@@ -31,7 +31,7 @@ function indent() {
 }
 
 function manifest_version() {
-  curl "http//${S3_BUCKET}.s3.amazonaws.com/manifest.${1}" -s -o - | head -n 1
+  curl "http//enquire-geo.s3.amazonaws.com/manifest.${1}" -s -o - | head -n 1
 }
 
 
@@ -41,7 +41,7 @@ function download_package() {
   location="$3"
 
   mkdir -p $location
-  package="https://${S3_BUCKET}.s3.amazonaws.com/$name-$version.tgz"
+  package="https://enquire-geo.s3.amazonaws.com/$name-$version.tgz"
   curl $package -s -o - | tar xzf - -C $location
 }
 
