@@ -118,8 +118,10 @@ BUNDLE_WITHOUT: development:test
 BUNDLE_DISABLE_SHARED_GEMS: '1'
 " > $BUILD_DIR/.bundle/config
 
+echo 'ls $BUILD_DIR/$TARGET_VENDOR_DIR/lib'
 ls $BUILD_DIR/$TARGET_VENDOR_DIR/lib
-ls $TARGET_VENDOR_DIR/lib
+echo 'ls ~/$TARGET_VENDOR_DIR/lib'
+ls ~/$TARGET_VENDOR_DIR/lib
 
 set-default-env LIBRARY_PATH "$APP_VENDOR/lib"
 set-default-env LD_LIBRARY_PATH "$APP_VENDOR/lib"
