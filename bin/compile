@@ -110,23 +110,21 @@ if [ -f $CACHE_DIR/.bundle/config ]; then
   rm $CACHE_DIR/.bundle/config
 fi
 echo "---
-BUNDLE_BUILD__RGEO: --with-geos-dir=$BUILD_DIR/$TARGET_VENDOR_DIR --with-proj-dir=$BUILD_DIR/$TARGET_VENDOR_DIR
+BUNDLE_BUILD__RGEO: \"--with-geos-dir=$BUILD_DIR/$TARGET_VENDOR_DIR --with-proj-dir=$BUILD_DIR/$TARGET_VENDOR_DIR\"
 BUNDLE_FROZEN: '1'
 BUNDLE_PATH: vendor/bundle
 BUNDLE_BIN: vendor/bundle/bin
 BUNDLE_WITHOUT: development:test
 BUNDLE_DISABLE_SHARED_GEMS: '1'
-BUNDLE_GEMFILE: UNKNOWNFILE
 " > $BUILD_DIR/.bundle/config
 
 echo "---
-BUNDLE_BUILD__RGEO: --with-geos-dir=$BUILD_DIR/$TARGET_VENDOR_DIR --with-proj-dir=$BUILD_DIR/$TARGET_VENDOR_DIR
+BUNDLE_BUILD__RGEO: \"--with-geos-dir=$BUILD_DIR/$TARGET_VENDOR_DIR --with-proj-dir=$BUILD_DIR/$TARGET_VENDOR_DIR\"
 BUNDLE_FROZEN: '1'
 BUNDLE_PATH: vendor/bundle
 BUNDLE_BIN: vendor/bundle/bin
 BUNDLE_WITHOUT: development:test
 BUNDLE_DISABLE_SHARED_GEMS: '1'
-BUNDLE_GEMFILE: UNKNOWNFILE
 "
 
 ls $BUILD_DIR/$TARGET_VENDOR_DIR/bin
