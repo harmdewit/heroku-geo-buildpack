@@ -110,7 +110,7 @@ if [ -f $CACHE_DIR/.bundle/config ]; then
 fi
 mkdir -p $BUILD_DIR/.bundle
 echo "---
-BUNDLE_BUILD__RGEO: --with-geos-dir=$APP_VENDOR --with-proj-dir=$APP_VENDOR
+BUNDLE_BUILD__RGEO: --with-geos-dir=$CACHE_DIR/$VENDORED_GEOS --with-proj-dir=$CACHE_DIR/$VENDORED_PROJ
 BUNDLE_FROZEN: '1'
 BUNDLE_PATH: vendor/bundle
 BUNDLE_BIN: vendor/bundle/bin
