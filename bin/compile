@@ -117,7 +117,7 @@ fi
 # BUNDLE_DISABLE_SHARED_GEMS: '1'
 # " > $BUILD_DIR/.bundle/config
 
-set-env BUNDLE_BUILD__RGEO "--with-geos-dir=$BUILD_DIR/$TARGET_VENDOR_DIR --with-proj-dir=$BUILD_DIR/$TARGET_VENDOR_DIR"
+set-env BUNDLE_BUILD__RGEO "\"--with-geos-dir=$BUILD_DIR/$TARGET_VENDOR_DIR --with-proj-dir=$BUILD_DIR/$TARGET_VENDOR_DIR\""
 
 set-default-env LIBRARY_PATH "$APP_VENDOR/lib"
 set-default-env LD_LIBRARY_PATH "$APP_VENDOR/lib"
